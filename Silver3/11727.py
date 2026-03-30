@@ -5,8 +5,8 @@ dp[1] = 1
 
 for i in range(2, n+1):
     if i == 2:
-        dp[2] = 2
+        dp[2] = 3
         continue
-    dp[i] = (dp[i-1] + dp[i-2])%10007
+    dp[i] = (dp[i-1] + dp[i-2] * 2)%10007
 
-print(dp[n]) 
+print(dp[n])
